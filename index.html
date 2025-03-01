@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Red Calc YNWA</title> <!-- Using one of the suggested names -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="liverpool_crest.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+</head>
+<body>
+    <div class="calculator">
+        <div class="display" id="display">0</div>
+        <div class="buttons">
+            <button class="btn memory" data-action="memory-clear">MC</button>
+            <button class="btn memory" data-action="memory-recall">MR</button>
+            <button class="btn memory" data-action="memory-add">M+</button>
+            <button class="btn memory" data-action="memory-subtract">M-</button>
+            <button class="btn operation" data-action="clear">C</button>
+            <button class="btn operation" data-action="percent">%</button>
+            <button class="btn operation" data-action="divide">÷</button>
+            <button class="btn operation" data-action="multiply">×</button>
+            <button class="btn number" data-value="7">7</button>
+            <button class="btn number" data-value="8">8</button>
+            <button class="btn number" data-value="9">9</button>
+            <button class="btn operation" data-action="subtract">-</button>
+            <button class="btn number" data-value="4">4</button>
+            <button class="btn number" data-value="5">5</button>
+            <button class="btn number" data-value="6">6</button>
+            <button class="btn operation" data-action="add">+</button>
+            <button class="btn number" data-value="1">1</button>
+            <button class="btn number" data-value="2">2</button>
+            <button class="btn number" data-value="3">3</button>
+            <button class="btn operation" data-action="equals">=</button>
+            <button class="btn number" data-value="0">0</button>
+            <button class="btn number" data-value=".">.</button>
+            <button class="btn liverpool-logo" id="easter-egg" title="Enter 1892 for a surprise!">LFC</button>
+        </div>
+    </div>
+    <audio id="click-sound" src="ynwa_chant.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
