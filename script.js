@@ -10,10 +10,11 @@ let memory = 0;
 
 // Array of Liverpool FC-related background images (replace with your actual paths)
 const backgroundImages = [
-    'images/anfield_1920x1080.jpg', // Base size: 1920x1080 (or higher for high-DPI)
-    'images/match_action_1920x1080.jpg',
-    'images/liverpool_crest_1920x1080.jpg',
-    'images/anfield_night_1920x1080.jpg'
+    'images/anfieldhug_1920x1080.jpg', // Base size: 1920x1080 (or higher for high-DPI)
+    'images/anfieldnight_1920x1080.jpg',
+    'images/anfieldstd_1920x1080.jpg.jpg',
+    'images/anfieldwin_1920x1080.jpg'
+    'images/liverpoolcup_1920x1080.jpg'
 ];
 
 let currentImageIndex = 0;
