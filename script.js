@@ -1,11 +1,54 @@
 const display = document.getElementById('display');
 const buttons = document.querySelectorAll('.btn');
 const clickSound = document.getElementById('click-sound');
+const body = document.body;
 
 let currentInput = '0';
 let previousInput = '';
 let operation = null;
 let memory = 0;
+
+// Array of Liverpool FC-related background images (replace with your actual paths)
+const backgroundImages = [
+    'images/anfield_1920x1080.jpg', // Base size: 1920x1080 (or higher for high-DPI)
+    'images/match_action_1920x1080.jpg',
+    'images/liverpool_crest_1920x1080.jpg',
+    'images/anfield_night_1920x1080.jpg'
+];
+
+let currentImageIndex = 0;
+let preloadedImages = [];
+
+// Preload images to improve performance
+function preloadImages() {
+    backgroundImages.forEach(src => {
+        const img = new Image();
+        img.src = src;
+        img.onload = () => preloadedImages.push(img); // Store preloaded images
+        img.onerror = () => console.error(`Failed to load image: ${src}`); // Handle errors
+    });
+}
+
+// Function to change background image using preloaded images
+function changeBackground() {
+    if (preloadedImages.length === backgroundImages.length) {
+        body.style.backgroundImage = `url('${preloadedImages[currentImageIndex].src}')`;
+        currentImageIndex = (currentImageIndex + 1) % backgroundImages.length;
+    } else {
+        // Fallback if images aren't fully preloaded yet
+        body.style.backgroundImage = `url('${backgroundImages[currentImageIndex]}')`;
+        currentImageIndex = (currentImageIndex + 1) % backgroundImages.length;
+    }
+}
+
+// Start preloading images immediately when the page loads
+window.addEventListener('load', () => {
+    preloadImages();
+    // Start the slideshow (change every 60 seconds) after preloading
+    setInterval(changeBackground, 60000); // 60000 ms = 1 minute
+    // Initial background set
+    changeBackground();
+});
 
 buttons.forEach(button => {
     button.addEventListener('click', (e) => {
