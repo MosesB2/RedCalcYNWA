@@ -11,12 +11,16 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('') no-repeat center/cover;
+    background: url('') no-repeat center/cover; /* Placeholder; JavaScript will handle this */
     background-attachment: fixed;
     overflow: hidden;
     margin: 0;
     padding: 0;
-    transition: background-image 1s ease;
+    transition: background-image 1s ease; /* Smooth transition for image changes */
+}
+
+body.slide-bg {
+    /* This class will be toggled by JavaScript for the slideshow */
 }
 
 .calculator {
