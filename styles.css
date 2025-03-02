@@ -11,11 +11,12 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('https://backend.liverpoolfc.com/sites/default/files/styles/lg/public/acquiadam/2022-05/liverpool-fc-fa-cup-win-300522.webp?itok=3frsbGpX&width=1680') no-repeat center/cover;
+    background: url('') no-repeat center/cover;
     background-attachment: fixed;
     overflow: hidden;
     margin: 0;
     padding: 0;
+    transition: background-image 1s ease;
 }
 
 .calculator {
